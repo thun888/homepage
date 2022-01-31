@@ -1,0 +1,72 @@
+
+<html>
+<head>
+    <title>主页 - 😊thun888.xyz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="https://www.unpkg.com/thun888-oss@1.0.0/img/base/favicion.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
+    <meta name="keywords" content="BLOG,Drive,Tools,Everything,thun888">
+    <meta name="description" content="BLOG,Drive,Tools,Everything,thun888">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+</head>
+
+<script>
+    // 浏览器标题切换  
+    var OriginTitile = document.title; // 保存之前页面标题  
+    var titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(ToT)/~~~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = "嘻嘻('◡'●)";
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            }, 2000); // 2秒后恢复原标题  
+        }
+    });
+</script>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
+
+            <header id="header">
+                <h1>Thun888</h1>
+                <p>Home</p>
+                <nav>
+                    <ul>
+
+                        <li><a href="https://blog.thun888.xyz" class="fa fa-book" alt="Blog"><span class="label">Blog</span></a></li>
+                        <li><a href="https://github.com/thun888" class="fa fa-github" alt="Github"><span class="label">Github</span></a></li>
+                        <!--<li><a href="https://tools.thun888.xyz" class="fa fa-wrench" alt="tools"><span class="label">tools</span></a></li>-->
+                        <li><a href="https://share.thun888.xyz" class="fa fa-cloud" alt="onedrive"><span class="label">Onedrive</span></a></li>
+                        <!--<li><a href="https://web.thun888.xyz" class="fa fa-list-alt" alt="websites"><span class="label">Websites</span></a></li>-->
+                        <li><a href="https://blog.thun888.xyz/about" class="fa fa-address-card" alt="About"><span class="label">About</span></a></li>
+                        <!--<li><a href="#" class="fa fa-user-secret" alt="Blog"><span class="label">隐私政策</span></a></li>-->
+                        <li><a href="https://blog.thun888.xyz/atom.xml" class="fa fa-rss" alt="rss"><span class="label">rss</span></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            document.body.classList.remove('is-preload');
+        }
+        window.ontouchmove = function() {
+            return false;
+        }
+        window.onorientationchange = function() {
+            document.body.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
