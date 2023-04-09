@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Microsoft 365 的域所有权验证文件 - 放置在网站根目录中",
+  "Domain": "hzchu.top",
+  "Id": "8d388999-b232-496c-a2d8-37f7329794a3"
+}
