@@ -54,9 +54,17 @@
 
         </div>
     </div>
+    <footer id="beian-footer" class="is-preload">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2025382466号-1</a>
+    </footer>
     <script>
         window.onload = function() {
             document.body.classList.remove('is-preload');
+            
+            // 设置延时，确保导航元素完全显示后再显示页脚
+            setTimeout(function() {
+                document.getElementById('beian-footer').classList.remove('is-preload');
+            }, 6000); // 6秒延时，确保在导航元素之后显示
         }
         window.ontouchmove = function() {
             return false;
@@ -88,6 +96,44 @@
         @media screen and (max-width: 350px) {
             #logo {
                 width: 100%;
+            }
+        }
+
+        #beian-footer {
+            opacity: 1;
+            transform: none;
+            transition: opacity 1s ease, transform 1s ease;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8em;
+            background-color: rgba(70, 70, 70, 0.5);
+            padding: 5px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            box-shadow: none;
+        }
+        
+        #beian-footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        #beian-footer a:hover {
+            color: #fff;
+        }
+        
+        #beian-footer.is-preload {
+            opacity: 0;
+            transform: translateY(1em);
+        }
+        
+        @media screen and (max-width: 736px) {
+            #beian-footer {
+                font-size: 0.7em;
+                padding: 4px 0;
             }
         }
     </style>
